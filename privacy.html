@@ -6,7 +6,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+h3, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -30,18 +30,18 @@ img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-width: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+#write h3, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h3, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+h3, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
-h1 { font-size: 2rem; }
+h3 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
 h3 { font-size: 1.6rem; }
 h4 { font-size: 1.4rem; }
 h5 { font-size: 1.2rem; }
 h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.md-math-block, .md-rawblock, h3, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
@@ -118,7 +118,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-item a { text-decoration: none; }
 .md-toc-inner:hover { text-decoration: underline; }
 .md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h3 .md-toc-inner { margin-left: 0px; font-weight: 700; }
 .md-toc-h2 .md-toc-inner { margin-left: 2em; }
 .md-toc-h3 .md-toc-inner { margin-left: 4em; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
@@ -153,7 +153,7 @@ mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
 @media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+  .typora-export h3, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
@@ -178,7 +178,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
 .outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h3 > .outline-item { padding-left: 0px; }
 .outline-h2 > .outline-item { padding-left: 1em; }
 .outline-h3 > .outline-item { padding-left: 2em; }
 .outline-h4 > .outline-item { padding-left: 3em; }
@@ -268,7 +268,7 @@ body {
 a {
     color: #4183C4;
 }
-h1,
+h3,
 h2,
 h3,
 h4,
@@ -281,7 +281,7 @@ h6 {
     line-height: 1.4;
     cursor: text;
 }
-h1:hover a.anchor,
+h3:hover a.anchor,
 h2:hover a.anchor,
 h3:hover a.anchor,
 h4:hover a.anchor,
@@ -289,8 +289,8 @@ h5:hover a.anchor,
 h6:hover a.anchor {
     text-decoration: none;
 }
-h1 tt,
-h1 code {
+h3 tt,
+h3 code {
     font-size: inherit;
 }
 h2 tt,
@@ -313,7 +313,7 @@ h6 tt,
 h6 code {
     font-size: inherit;
 }
-h1 {
+h3 {
     font-size: 2.25em;
     line-height: 1.2;
     border-bottom: 1px solid #eee;
@@ -325,13 +325,13 @@ h2 {
 }
 
 /*@media print {
-    .typora-export h1,
+    .typora-export h3,
     .typora-export h2 {
         border-bottom: none;
         padding-bottom: initial;
     }
 
-    .typora-export h1::after,
+    .typora-export h3::after,
     .typora-export h2::after {
         content: "";
         display: block;
@@ -612,6 +612,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>TalkGo 隐私政策</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='talkgo-隐私政策'><span>TalkGo 隐私政策</span></h1><p><strong><span>最后更新日期：2026 年 7 月 17 日</span></strong></p><p><span>欢迎使用 </span><strong><span>TalkGo</span></strong><span>（以下简称“本应用”）。</span></p><p><span>我们非常重视您的个人信息和隐私保护。本隐私政策旨在说明我们如何收集、使用、存储和保护您的信息，以及您享有的相关权利。</span></p><p><span>使用本应用即表示您已阅读并同意本隐私政策。</span></p><hr /><h1 id='一我们收集的信息'><span>一、我们收集的信息</span></h1><p><span>为了向您提供服务，我们可能收集以下信息：</span></p><h3 id='1-账号信息'><span>1. 账号信息</span></h3><p><span>当您注册账号时，我们会收集：</span></p><ul><li><p><span>用户名</span></p></li><li><p><span>登录邮箱（系统内部使用）</span></p></li><li><p><span>加密后的账号认证信息</span></p></li></ul><h3 id='2-使用信息'><span>2. 使用信息</span></h3><p><span>为了提供翻译服务，我们可能记录：</span></p><ul><li><p><span>点数余额</span></p></li><li><p><span>会员状态</span></p></li><li><p><span>购买记录</span></p></li><li><p><span>翻译使用记录</span></p></li><li><p><span>服务日志</span></p></li></ul><h3 id='3-设备信息'><span>3. 设备信息</span></h3><p><span>为了保障账号安全、防止恶意注册及改善服务，我们可能收集：</span></p><ul><li><p><span>设备标识（如应用生成的设备 ID）</span></p></li><li><p><span>应用版本</span></p></li><li><p><span>操作系统版本</span></p></li><li><p><span>设备型号</span></p></li></ul><p><span>我们不会收集设备中的通讯录、短信、照片等与服务无关的信息。</span></p><h3 id='4-支付信息'><span>4. 支付信息</span></h3><p><span>应用内购买由 </span><strong><span>Apple App Store</span></strong><span> 完成。</span></p><p><span>我们不会获取您的银行卡、信用卡或 Apple Pay 等支付信息。</span></p><p><span>我们仅接收 Apple 返回的购买状态，用于发放相应的会员或点数权益。</span></p><hr /><h1 id='二信息如何使用'><span>二、信息如何使用</span></h1><p><span>我们收集的信息仅用于以下目的：</span></p><ul><li><p><span>提供翻译服务；</span></p></li><li><p><span>完成账号登录；</span></p></li><li><p><span>发放会员权益；</span></p></li><li><p><span>发放点数；</span></p></li><li><p><span>防止恶意注册及欺诈行为；</span></p></li><li><p><span>提高系统稳定性；</span></p></li><li><p><span>优化产品体验；</span></p></li><li><p><span>履行法律法规规定的义务。</span></p></li></ul><p><span>未经您的同意，我们不会将您的个人信息用于其他用途。</span></p><hr /><h1 id='三信息存储'><span>三、信息存储</span></h1><p><span>您的数据将存储于我们所使用的云服务平台（如 Supabase）中。</span></p><p><span>我们会采取合理的技术和管理措施保护您的数据安全，包括但不限于：</span></p><ul><li><p><span>数据传输加密（HTTPS）</span></p></li><li><p><span>权限控制</span></p></li><li><p><span>身份认证</span></p></li><li><p><span>数据备份</span></p></li><li><p><span>安全审计</span></p></li></ul><p><span>虽然我们会尽合理努力保护您的信息，但任何互联网传输方式均无法保证绝对安全。</span></p><hr /><h1 id='四第三方服务'><span>四、第三方服务</span></h1><p><span>为了实现相关功能，本应用可能使用以下第三方服务：</span></p><ul><li><p><span>Apple App Store（应用内购买）</span></p></li><li><p><span>Apple StoreKit（购买验证）</span></p></li><li><p><span>Microsoft Azure（语音识别、语音翻译、语音合成）</span></p></li><li><p><span>Supabase（账号、数据库及云服务）</span></p></li></ul><p><span>上述第三方可能依据其隐私政策处理必要的数据。</span></p><p><span>建议您同时阅读相关第三方隐私政策。</span></p><hr /><h1 id='五ai-翻译数据'><span>五、AI 翻译数据</span></h1><p><span>当您使用翻译服务时，您的语音或文本内容可能发送至 AI 或语音服务提供商进行处理，以完成：</span></p><ul><li><p><span>语音识别</span></p></li><li><p><span>文本翻译</span></p></li><li><p><span>语音合成</span></p></li></ul><p><span>这些数据仅用于完成当前翻译请求，不会用于识别您的身份。</span></p><hr /><h1 id='六未成年人保护'><span>六、未成年人保护</span></h1><p><span>本应用主要面向具有完全民事行为能力的用户。</span></p><p><span>如您未满当地法律规定的年龄，请在监护人的指导下使用本应用。</span></p><hr /><h1 id='七您的权利'><span>七、您的权利</span></h1><p><span>您有权：</span></p><ul><li><p><span>查询账号信息；</span></p></li><li><p><span>修改账号信息；</span></p></li><li><p><span>注销账号；</span></p></li><li><p><span>停止使用本应用。</span></p></li></ul><p><span>账号注销后，我们将在法律法规允许的范围内删除或匿名化您的相关数据，但法律法规另有规定的除外。</span></p><hr /><h1 id='八cookie-与本地存储'><span>八、Cookie 与本地存储</span></h1><p><span>本应用不会通过网页 Cookie 收集您的个人信息。</span></p><p><span>为了改善用户体验，本应用可能在设备本地保存必要的缓存数据，例如：</span></p><ul><li><p><span>登录状态</span></p></li><li><p><span>服务区域设置</span></p></li><li><p><span>应用配置</span></p></li></ul><p><span>这些数据仅存储于您的设备，可随时通过卸载应用或清除数据删除。</span></p><hr /><h1 id='九隐私政策更新'><span>九、隐私政策更新</span></h1><p><span>我们可能根据法律法规或业务发展情况更新本隐私政策。</span></p><p><span>更新后的版本将在应用内或官方网站公布。</span></p><p><span>继续使用本应用即表示您接受更新后的隐私政策。</span></p><hr /><h1 id='十联系我们'><span>十、联系我们</span></h1><p><span>如您对本隐私政策有任何疑问、意见或建议，请联系我们：</span></p><p><strong><span>客服微信：</span></strong><span> xxxxxxxx</span></p><p><strong><span>联系邮箱：</span></strong><span> </span><a href='mailto:support@example.com'><span>support@example.com</span></a></p><p><span>我们将在合理时间内回复您的咨询。</span></p><hr /><p><span>感谢您对 TalkGo 的信任与支持！</span></p></div></div>
+<div id='write'  class=''><h3 id='talkgo-隐私政策'><span>TalkGo 隐私政策</span></h3><p><strong><span>最后更新日期：2026 年 7 月 17 日</span></strong></p><p><span>欢迎使用 </span><strong><span>TalkGo</span></strong><span>（以下简称“本应用”）。</span></p><p><span>我们非常重视您的个人信息和隐私保护。本隐私政策旨在说明我们如何收集、使用、存储和保护您的信息，以及您享有的相关权利。</span></p><p><span>使用本应用即表示您已阅读并同意本隐私政策。</span></p><hr /><h3 id='一我们收集的信息'><span>一、我们收集的信息</span></h3><p><span>为了向您提供服务，我们可能收集以下信息：</span></p><h3 id='1-账号信息'><span>1. 账号信息</span></h3><p><span>当您注册账号时，我们会收集：</span></p><ul><li><p><span>用户名</span></p></li><li><p><span>登录邮箱（系统内部使用）</span></p></li><li><p><span>加密后的账号认证信息</span></p></li></ul><h3 id='2-使用信息'><span>2. 使用信息</span></h3><p><span>为了提供翻译服务，我们可能记录：</span></p><ul><li><p><span>点数余额</span></p></li><li><p><span>会员状态</span></p></li><li><p><span>购买记录</span></p></li><li><p><span>翻译使用记录</span></p></li><li><p><span>服务日志</span></p></li></ul><h3 id='3-设备信息'><span>3. 设备信息</span></h3><p><span>为了保障账号安全、防止恶意注册及改善服务，我们可能收集：</span></p><ul><li><p><span>设备标识（如应用生成的设备 ID）</span></p></li><li><p><span>应用版本</span></p></li><li><p><span>操作系统版本</span></p></li><li><p><span>设备型号</span></p></li></ul><p><span>我们不会收集设备中的通讯录、短信、照片等与服务无关的信息。</span></p><h3 id='4-支付信息'><span>4. 支付信息</span></h3><p><span>应用内购买由 </span><strong><span>Apple App Store</span></strong><span> 完成。</span></p><p><span>我们不会获取您的银行卡、信用卡或 Apple Pay 等支付信息。</span></p><p><span>我们仅接收 Apple 返回的购买状态，用于发放相应的会员或点数权益。</span></p><hr /><h3 id='二信息如何使用'><span>二、信息如何使用</span></h3><p><span>我们收集的信息仅用于以下目的：</span></p><ul><li><p><span>提供翻译服务；</span></p></li><li><p><span>完成账号登录；</span></p></li><li><p><span>发放会员权益；</span></p></li><li><p><span>发放点数；</span></p></li><li><p><span>防止恶意注册及欺诈行为；</span></p></li><li><p><span>提高系统稳定性；</span></p></li><li><p><span>优化产品体验；</span></p></li><li><p><span>履行法律法规规定的义务。</span></p></li></ul><p><span>未经您的同意，我们不会将您的个人信息用于其他用途。</span></p><hr /><h3 id='三信息存储'><span>三、信息存储</span></h3><p><span>您的数据将存储于我们所使用的云服务平台（如 Supabase）中。</span></p><p><span>我们会采取合理的技术和管理措施保护您的数据安全，包括但不限于：</span></p><ul><li><p><span>数据传输加密（HTTPS）</span></p></li><li><p><span>权限控制</span></p></li><li><p><span>身份认证</span></p></li><li><p><span>数据备份</span></p></li><li><p><span>安全审计</span></p></li></ul><p><span>虽然我们会尽合理努力保护您的信息，但任何互联网传输方式均无法保证绝对安全。</span></p><hr /><h3 id='四第三方服务'><span>四、第三方服务</span></h3><p><span>为了实现相关功能，本应用可能使用以下第三方服务：</span></p><ul><li><p><span>Apple App Store（应用内购买）</span></p></li><li><p><span>Apple StoreKit（购买验证）</span></p></li><li><p><span>AI大模型（语音识别、语音翻译、语音合成）</span></p></li><li><p><span>云服务器（账号、数据库及云服务）</span></p></li></ul><p><span>上述第三方可能依据其隐私政策处理必要的数据。</span></p><p><span>建议您同时阅读相关第三方隐私政策。</span></p><hr /><h3 id='五ai-翻译数据'><span>五、AI 翻译数据</span></h3><p><span>当您使用翻译服务时，您的语音或文本内容可能发送至 AI 或语音服务提供商进行处理，以完成：</span></p><ul><li><p><span>语音识别</span></p></li><li><p><span>文本翻译</span></p></li><li><p><span>语音合成</span></p></li></ul><p><span>这些数据仅用于完成当前翻译请求，不会用于识别您的身份。</span></p><hr /><h3 id='六未成年人保护'><span>六、未成年人保护</span></h3><p><span>本应用主要面向具有完全民事行为能力的用户。</span></p><p><span>如您未满当地法律规定的年龄，请在监护人的指导下使用本应用。</span></p><hr /><h3 id='七您的权利'><span>七、您的权利</span></h3><p><span>您有权：</span></p><ul><li><p><span>查询账号信息；</span></p></li><li><p><span>修改账号信息；</span></p></li><li><p><span>注销账号；</span></p></li><li><p><span>停止使用本应用。</span></p></li></ul><p><span>账号注销后，我们将在法律法规允许的范围内删除或匿名化您的相关数据，但法律法规另有规定的除外。</span></p><hr /><h3 id='八cookie-与本地存储'><span>八、Cookie 与本地存储</span></h3><p><span>本应用不会通过网页 Cookie 收集您的个人信息。</span></p><p><span>为了改善用户体验，本应用可能在设备本地保存必要的缓存数据，例如：</span></p><ul><li><p><span>登录状态</span></p></li><li><p><span>服务区域设置</span></p></li><li><p><span>应用配置</span></p></li></ul><p><span>这些数据仅存储于您的设备，可随时通过卸载应用或清除数据删除。</span></p><hr /><h3 id='九隐私政策更新'><span>九、隐私政策更新</span></h3><p><span>我们可能根据法律法规或业务发展情况更新本隐私政策。</span></p><p><span>更新后的版本将在应用内或官方网站公布。</span></p><p><span>继续使用本应用即表示您接受更新后的隐私政策。</span></p><hr /><h3 id='十联系我们'><span>十、联系我们</span></h3><p><span>如您对本隐私政策有任何疑问、意见或建议，请联系我们：</span></p><p><strong><span>客服微信：</span></strong><span> Xiaohh-_-</span></p><p><strong><span>联系邮箱：</span></strong><span> </span><a href='mailto:237703988@qq.com'><span>237703988@qq.com</span></a></p><p><span>我们将在合理时间内回复您的咨询。</span></p><hr /><p><span>感谢您对 TalkGo 的信任与支持！</span></p></div></div>
 </body>
 </html>
